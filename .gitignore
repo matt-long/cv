@@ -1,0 +1,12 @@
+.ipynb_checkpoints
+.DS_Store
+*.aux
+*.log
+*.out
+*.blg
+*.bbl
+*.bcf
+*.docx
+*.fdb_latexmk
+*.fls
+*.synctex.gz
