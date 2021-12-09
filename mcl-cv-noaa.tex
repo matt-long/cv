@@ -1,103 +1,18 @@
 %!TEX program = pdflatex
 \documentclass[12pt]{article}
 \usepackage[left=2.54cm,top=2.54cm,right=2.54cm,bottom=2.54cm]{geometry}
-\usepackage[sort&compress,square,numbers]{natbib}
-\usepackage{amsmath,url}
-\usepackage{graphicx,color,soul}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[version=4]{mhchem}
-\usepackage{atbegshi}
-\usepackage{lipsum}
-
-\usepackage[final]{pdfpages}
-
-%-- fonts
-\usepackage{sansmathfonts}
-\usepackage[T1]{fontenc}
+\usepackage[inline]{enumitem}
 \usepackage{palatino}
-%\usepackage{helvet}
-%\renewcommand\familydefault{\sfdefault}
-%\renewcommand{\rmdefault}{\sfdefault}
-
-\usepackage[math]{blindtext}
-\usepackage[font=footnotesize,labelfont=bf]{caption}
-
-%\usepackage[scale=0.5]{tgpagella}
-
+\usepackage{url}
 \urlstyle{rm}
 
-%-- title spacing and style
 \usepackage{titlesec}
-\titleformat{\part}
-{\normalfont\large\bfseries}{\thepart}{1em}{}
-
 \titleformat{\section}
 {\normalfont\normalsize\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}
-{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}
-{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
-\titleformat{\paragraph}[runin]
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titleformat{\subparagraph}[runin]
-{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
-
-\titlespacing\part{0pt}{4pt plus 0.1pt minus 0.1pt}{8pt plus 2pt minus 2pt}
-\titlespacing\section{0pt}{4pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
-\titlespacing\subsection{0pt}{6pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
-\titlespacing\subsubsection{0pt}{2pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
-\titlespacing\paragraph{0pt}{6pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
-
+\titlespacing\section{0pt}{3pt plus 2pt minus 2pt}{3pt plus 2pt minus 2pt}
 \renewcommand{\thesection}{(\alph{section})}
 
-%-- figure
-\usepackage{wrapfig}
-\usepackage{subcaption}
-\usepackage{multirow}
-\usepackage{array,booktabs}
-\usepackage[inline]{enumitem}
-\newlist{inline-enumerate}{enumerate*}{1}
-\setlist*[inline-enumerate,1]{%
-  label=(\roman*),
-}
 
-\newcounter{H}
-\newcommand{\hypothesis}[1]{\stepcounter{H}%
-\smallskip\paragraph{H\arabic{H}: #1.}}
-
-%-- equation spacing
-\AtBeginDocument{%
-  \addtolength\abovedisplayskip{-0.2\baselineskip}%
-  \addtolength\belowdisplayskip{-0.2\baselineskip}%
-  \addtolength\abovedisplayshortskip{-0.2\baselineskip}%
-  \addtolength\belowdisplayshortskip{-0.2\baselineskip}%
-}
-
-%-- list format
-\usepackage{enumitem}
-\setlist[description]{font=\bfseries\normalsize}
-\renewcommand{\descriptionlabel}[1]{#1:}
-
-%-- general formatting
-\renewcommand{\refname}{}
-\setlength{\bibsep}{2.0pt}
-
-%-- environments
-
-%-- macros
-\makeatletter
-\providecommand{\doi}[1]{%
-  \begingroup
-    \let\bibinfo\@secondoftwo
-      doi:\discretionary{}{}{}%
-      {#1}%
-  \endgroup
-}
-\makeatother
-
-%-------------------------------------------------------------------------------
-%-- begin
-%-------------------------------------------------------------------------------
 \begin{document}
 \thispagestyle{empty}
 
@@ -113,18 +28,19 @@ P.O. Box 3000, Boulder, CO 80307\\
 Phone: 303-497-1311; e-mail: mclong@ucar.edu\\
 ORCID: 0000-0003-1273-2957
 \end{center}
-%------------------------------------------------------------------------------------------------
-% Undergraduate, graduate and postdoctoral training, provide institution, major/area, degree and year.
+
+
 \section{Professional preparation}
+
 \begin{tabular}{lllll}
 Tufts University	&	Medford, MA 	& Environmental Engineering	& B.S.	& 1998 	\\
 Tufts University	&  	Medford, MA		& Environmental Engineering	& M.S.	& 2000	\\
 Stanford University	&	Stanford, CA	& Oceanography				& Ph.D.	& 2010
 \end{tabular}
 
-%------------------------------------------------------------------------------------------------
-% Beginning with the current position list, in chronological order, professional/academic positions with a brief description.
+
 \section{Appointments}
+
 \begin{description}[style=multiline,leftmargin=2.8cm,font=\normalfont]
 \setlength{\itemsep}{-0.5em}
 \item[2014--present] {Scientist I, II}; Oceanography Section, NCAR.
@@ -134,10 +50,10 @@ Stanford University	&	Stanford, CA	& Oceanography				& Ph.D.	& 2010
 \item[2000--2002] {High School Physics \& Geography Teacher}; US Peace Corps, Tanzania.
 \end{description}
 
-%------------------------------------------------------------------------------------------------
-%Provide a list of up to 10 publications most closely related to the proposed project.  For each publication, identify the names of all authors (in the same sequence in which they appear in the publication), the article title, book or journal title, volume number, page numbers, year of publication, and website address if available electronically. Patents, copyrights and software systems developed may be provided in addition to or substituted for publications.
+
 \section{Five most closely related publications
 {\footnotesize ($^*$student led; $^\dagger$postdoc led)}}
+
 \begin{enumerate}[leftmargin=1.5em,font=\normalfont]
 \setlength{\itemsep}{-0.3em}
 
@@ -162,9 +78,11 @@ $^*${Krumhardt}, K.~M., N.~S. Lovenduski, \textbf{M.~C. Long}, and K.~Lindsay (2
 
 \end{enumerate}
 
+
 \section{Five other significant publications}
+
 \begin{enumerate}[leftmargin=1.5em,font=\normalfont]
-\setlength{\itemsep}{-0.3em}
+\setlength{\itemsep}{-0.2em}
 
 \item
 \textbf{{Long}, M.~C.}, B. B. Stephens, K. McKain, C. Sweeny, R. Keeling, E. A. Kort, et al.
@@ -186,7 +104,5 @@ S.~C.Doney, N.~Mahowald, F.~Hoffman, J.~T. Randerson
 
 \item
 $^\dagger$Harrison, C., \textbf{M.~C. Long}, N.~{Lovenduski}, J. K. Moore (2018), {Mesoscale effects on carbon export: a global perspective}. \textit{Global Biogeochem. Cycles}, \textbf{32}(4), 680--703.
-
-
 \end{enumerate}
 \end{document}
